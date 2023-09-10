@@ -1,26 +1,29 @@
 <header class="text-lg font-sans py-2 bg-slate-950 text-slate-200">
   <div class="flex justify-between align-middle">
-    <div class="box-border hover:box-content w-40 p-0 m-0">
+    <div class="w-40 p-0 m-0">
       <img
-        class="w-36 overflow hover:w-40 ease-in-out duration-300"
+        class="w-36 hover:w-40 ease-in-out duration-300"
         src="../../../../assets/logo.png"
         alt="logo"
       />
     </div>
 
-    <ul class="flex flex-row list-none mr-10">
-      <li
-        *ngFor="let item of menuItems"
-        class="pr-5 cursor-pointer text-lg hover:text-2xl ease-in-out duration-300 hover:text-rose-600"
-        (click)="onClick()"
-      >
-        {{ item.title }}
+    <ul class="flex flex-row list-none">
+      <li *ngFor="let item of menuItems">
+        <div
+          class="text-center w-20 cursor-pointer text-lg hover:text-2xl ease-in-out duration-300 hover:text-rose-600 active:text-rose-600"
+          (click)="onClick()"
+        >
+          {{ item.title }}
+        </div>
       </li>
     </ul>
-    <img
-      class="h-10 overflow-hidden ml-10 mr-3"
-      src="https://cdn1.iconfinder.com/data/icons/user-pictures/100/unknown-512.png"
-      alt=""
-    />
+    <div class="w-40">
+      <img
+        class="h-10 ml-16"
+        src="https://cdn1.iconfinder.com/data/icons/user-pictures/100/unknown-512.png"
+        alt=""
+      />
+    </div>
   </div>
 </header>

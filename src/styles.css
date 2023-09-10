@@ -4,7 +4,7 @@
 
 /* Style the track (the area where the scrollbar moves) */
 ::-webkit-scrollbar {
-  width: 9px; /* Set the width of the scrollbar */
+  width: 8px; /* Set the width of the scrollbar */
 }
 
 /* Style the thumb (the draggable part of the scrollbar) */
