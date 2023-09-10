@@ -1,9 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { NgxSpinnerModule } from "ngx-spinner";
-import { NgxSpinnerService } from "ngx-spinner";
+import { NgxSpinnerModule, NgxSpinnerService } from "ngx-spinner";
 import { UserPanelComponent } from './components/user-panel/user-panel.component';
 
 @Component({
@@ -13,15 +12,28 @@ import { UserPanelComponent } from './components/user-panel/user-panel.component
   templateUrl: './layout.component.html',
   styleUrls: ['./layout.component.css'],
 })
-export class LayoutComponent implements OnInit {
-
+export class LayoutComponent implements AfterViewInit, OnInit {
+  @ViewChild('myVideo') myVideo!: ElementRef;
+  isVideoReady: boolean = false;
   constructor(private spinner: NgxSpinnerService) { }
-  ngOnInit(): void {
-    this.spinner.show();
-  }
 
-  showPanel(): void {
+  ngOnInit(): void {
+    this.spinner.show()
+  }
+  ngAfterViewInit() {
+    this.myVideo.nativeElement.addEventListener('loadedmetadata', () => {
+      // Video metadata has loaded
+      this.isVideoReady = true;
+    });
+
+    // Add an event listener for the 'canplaythrough' event
+    this.myVideo.nativeElement.addEventListener('canplaythrough', () => {
+      // Video is ready to play
+      this.isVideoReady = true;
+    });
+
 
   }
 
 }
+
