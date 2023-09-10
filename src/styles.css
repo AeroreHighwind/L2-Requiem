@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Style the track (the area where the scrollbar moves) */
+::-webkit-scrollbar {
+  width: 12px; /* Set the width of the scrollbar */
+}
+
+/* Style the thumb (the draggable part of the scrollbar) */
+::-webkit-scrollbar-thumb {
+  background-color: rgb(225, 29, 72); /* Set the background color */
+  border-radius: 1px; /* Round the corners of the thumb */
+}
+
+/* Style the track (the non-draggable part of the scrollbar) */
+::-webkit-scrollbar-track {
+  background: rgb(2, 6, 23); /* Set the background color of the track */
+}
