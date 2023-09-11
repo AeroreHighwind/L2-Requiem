@@ -20,10 +20,12 @@
     </ul>
     <div class="w-40">
       <img
-        class="h-10 ml-16"
+        class="h-10 ml-16 cursor-pointer"
         src="https://cdn1.iconfinder.com/data/icons/user-pictures/100/unknown-512.png"
         alt=""
+        (click)="toggleMenu()"
       />
+      <app-user-panel [isPanelActive]="getMenuActive()"></app-user-panel>
     </div>
   </div>
 </header>

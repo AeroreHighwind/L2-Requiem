@@ -1,14 +1,14 @@
-<ul
-  *ngIf="checkActive()"
-  class="flex flex-col list-none"
-  [ngClass]="checkActive() ? 'hidden' : 'flex'"
->
-  <li *ngFor="let item of menuItems">
-    <div
-      class="text-center w-20 cursor-pointer text-lg hover:text-2xl ease-in-out duration-300 hover:text-rose-600 active:text-rose-600"
-      (click)="onClick()"
-    >
-      {{ item.title }}
-    </div>
-  </li>
-</ul>
+<div class="container" [ngClass]="{ hidden: isPanelActive }">
+  <ul
+    class="absolute z-10 flex flex-col list-none p-2 right-3 top-16 backdrop-blur-xl rounded-md border-red-600 border-solid border ease-in-out duration-300"
+  >
+    <li *ngFor="let item of menuItems">
+      <div
+        class="text-center w-24 h-8 cursor-pointer text-lg hover:text-2xl ease-in-out duration-300 hover:text-rose-600 active:text-rose-600"
+        (click)="onClick()"
+      >
+        {{ item.title }}
+      </div>
+    </li>
+  </ul>
+</div>

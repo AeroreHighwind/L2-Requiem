@@ -15,9 +15,8 @@ interface MenuItem {
 })
 
 export class UserPanelComponent {
-  private isActive: boolean = false;
 
-  @Input() isPanelActive: boolean = this.isActive;
+  @Input() isPanelActive: boolean = false;
 
 
 
@@ -35,10 +34,10 @@ export class UserPanelComponent {
   }
 
   checkActive(): boolean {
-    return this.isActive;
+    return this.isPanelActive;
   }
   toggle(): void {
-    this.isActive = !this.isActive;
+    this.isPanelActive = !this.isPanelActive;
   }
 
 }
