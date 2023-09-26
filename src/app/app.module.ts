@@ -8,9 +8,10 @@ import { LayoutComponent } from './layout/layout.component';
 import { NgxSpinnerModule } from "ngx-spinner";
 import { CardComponent } from './characters/components/card/card.component';
 
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,

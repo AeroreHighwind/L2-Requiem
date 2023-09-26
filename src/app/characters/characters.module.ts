@@ -8,7 +8,7 @@ import { CharactersRoutingModule } from './characters-routing.module';
   declarations: [],
   imports: [
     CommonModule,
-    CharactersRoutingModule
+    CharactersRoutingModule,
   ]
 })
 export class CharactersModule { }

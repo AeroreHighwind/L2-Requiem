@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import { CharactersService } from '../../services/characters.service';
 import { first, tap } from 'rxjs';
 import { Character } from '../../dto/character.dto';
-
+import { CharacterImagePipe } from '../../../character-image.pipe';
 @Component({
   selector: 'app-card',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, CharacterImagePipe],
+  providers: [],
   templateUrl: './card.component.html',
   styles: [
   ]
