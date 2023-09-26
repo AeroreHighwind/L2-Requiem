@@ -1,33 +1,27 @@
 <div class="max-w-md w-full">
-  <div class="card">
-    <img
-      [src]="character | characterImage"
-      alt="Character Image"
-      class="card-image"
-    />
-    <div class="px-6 py-4">
-      <div class="font-bold text-xl mb-2">{{ character.char_name }}</div>
+  <div
+    class="card bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white p-4 relative shadow-lg rounded-xl flex items-center"
+  >
+    <div class="img-container border-2 border-yellow-500 w-20 h-20 ml-3 mr-4">
+      <img
+        [src]="character | characterImage"
+        alt="Character Image"
+        class="card-image w-20 h-20"
+      />
+    </div>
+    <div class="px-4 py-3">
+      <div class="font-bold text-xl mb-2 text-yellow-500">
+        {{ character.char_name }}
+      </div>
       <p class="text-sm">{{ character.title }}</p>
       <p class="text-sm">{{ character.level }}</p>
     </div>
   </div>
 </div>
 <style>
-  .card {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    color: #fff;
-    display: flex;
-    align-items: center;
-  }
-
-  .card-image {
+  .card-image,
+  .img-container {
     border-top-left-radius: 12px;
     border-bottom-left-radius: 12px;
-    width: 80px; /* Increased width */
-    height: 80px; /* Increased height */
-    margin-left: 10px; /* Increased margin from the left */
-    margin-right: 1rem;
   }
 </style>
