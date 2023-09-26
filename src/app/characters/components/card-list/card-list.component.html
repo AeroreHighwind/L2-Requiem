@@ -1,27 +1,10 @@
-<ul class="card-list">
-  <li class="card-item" *ngFor="let char of charList">
+<ul
+  class="card-list list-none p-0 flex flex-row flex-wrap gap-5 bg-transparent"
+>
+  <li
+    class="card-item w-80 p-4 transition-transform duration-200 ease-in-out mb-5 hover:scale-105"
+    *ngFor="let char of charList"
+  >
     <app-card [character]="char"></app-card>
   </li>
 </ul>
-
-<style>
-  .card-list {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-
-  .card-item {
-    width: 300px; /* Set a fixed width for each list item to match the card width */
-    padding: 16px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease-in-out;
-    margin-bottom: 20px; /* Add some spacing between each card */
-  }
-
-  .card-item:hover {
-    transform: scale(1.05);
-  }
-</style>
