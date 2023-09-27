@@ -1,6 +1,6 @@
 <div class="max-w-md w-full">
   <div
-    class="card bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white p-4 relative shadow-lg rounded-xl flex items-center"
+    class="card bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white p-4 relative shadow-lg rounded-xl flex items-cente"
   >
     <div class="img-container border-2 border-yellow-500 w-20 h-20 ml-3 mr-4">
       <img
@@ -9,12 +9,13 @@
         class="card-image w-20 h-20"
       />
     </div>
-    <div class="px-4 py-3">
+    <div class="px-2 py-0">
       <div class="font-bold text-xl mb-2 text-yellow-500">
         {{ character.char_name }}
       </div>
+      <p class="text-md whitespace-nowrap">{{ character | characterClass }}</p>
       <p class="text-sm">{{ character.title }}</p>
-      <p class="text-sm">{{ character.level }}</p>
+      <p class="text-sm">Lvl: {{ character.level }}</p>
     </div>
   </div>
 </div>
