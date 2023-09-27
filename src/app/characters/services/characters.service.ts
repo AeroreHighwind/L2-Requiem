@@ -7,7 +7,7 @@ import { Character } from '../dto/character.dto';
 })
 export class CharactersService {
 
-  private baseUrl: string = 'https://l2-requiem-backend-8dqg-dev.fl0.io/'
+  private baseUrl: string = 'https://l2-requiem-backend-8dqg-dev.fl0.io'
   constructor(private http: HttpClient) { }
 
   getCharacters(): Observable<Character[]> {
